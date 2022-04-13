@@ -8,9 +8,16 @@ inputs:
   database_id:
     required: true
     description: The notion database id to insert into
-  payload:
+  component:
+    description: The name of the component
     required: true
-    description: The payload to insert into the database
+  version:
+    required: true
+    description: The version of the component
+  test_results:
+    required: true
+    description: The test results for this build
+
 runs:
   using: 'node16'
   main: 'dist/index.js'

@@ -54,7 +54,35 @@ function run() {
             });
             yield notion.pages.create({
                 parent: { database_id: core.getInput('database_id') },
-                properties: JSON.parse(core.getInput('payload'))
+                properties: {
+                    component: {
+                        title: [
+                            {
+                                text: {
+                                    content: core.getInput('component')
+                                }
+                            }
+                        ]
+                    },
+                    version: {
+                        rich_text: [
+                            {
+                                text: {
+                                    content: core.getInput('version')
+                                }
+                            }
+                        ]
+                    },
+                    'Test Results': {
+                        rich_text: [
+                            {
+                                text: {
+                                    content: core.getInput('version')
+                                }
+                            }
+                        ]
+                    }
+                }
             });
         }
         catch (error) {
