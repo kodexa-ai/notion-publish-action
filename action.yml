@@ -2,10 +2,15 @@ name: 'Your name here'
 description: 'Provide a description here'
 author: 'Your name or organization here'
 inputs:
-  milliseconds: # change this
+  notion_token:
     required: true
-    description: 'input description here'
-    default: 'default value if applicable'
+    description: The notion token to use to connect
+  database_id:
+    required: true
+    description: The notion database id to insert into
+  payload:
+    required: true
+    description: The payload to insert into the database
 runs:
   using: 'node16'
   main: 'dist/index.js'
