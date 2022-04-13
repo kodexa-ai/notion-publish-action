@@ -11,7 +11,7 @@ async function run(): Promise<void> {
     await notion.pages.create({
       parent: {database_id: core.getInput('database_id')},
       properties: {
-        component: {
+        Component: {
           title: [
             {
               text: {
@@ -20,7 +20,7 @@ async function run(): Promise<void> {
             }
           ]
         },
-        version: {
+        Version: {
           rich_text: [
             {
               text: {

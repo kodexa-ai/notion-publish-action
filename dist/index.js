@@ -55,7 +55,7 @@ function run() {
             yield notion.pages.create({
                 parent: { database_id: core.getInput('database_id') },
                 properties: {
-                    component: {
+                    Component: {
                         title: [
                             {
                                 text: {
@@ -64,7 +64,7 @@ function run() {
                             }
                         ]
                     },
-                    version: {
+                    Version: {
                         rich_text: [
                             {
                                 text: {
