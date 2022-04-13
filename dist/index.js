@@ -53,7 +53,7 @@ function run() {
                 auth: core.getInput('notion_token')
             });
             yield notion.pages.create({
-                parent: { database_id: core.getInput('notion_database_id') },
+                parent: { database_id: core.getInput('database_id') },
                 properties: JSON.parse(core.getInput('payload'))
             });
         }
