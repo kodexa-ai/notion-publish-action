@@ -3,6 +3,7 @@ import {Client} from '@notionhq/client'
 
 async function run(): Promise<void> {
   try {
+
     // Initializing a client
     const notion = new Client({
       auth: core.getInput('notion_token')
@@ -12,6 +13,7 @@ async function run(): Promise<void> {
       parent: {database_id: core.getInput('notion_database_id')},
       properties: JSON.parse(core.getInput('payload'))
     })
+
   } catch (error) {
     if (error instanceof Error) core.setFailed(error.message)
   }
