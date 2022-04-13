@@ -33,7 +33,7 @@ async function run(): Promise<void> {
           rich_text: [
             {
               text: {
-                content: core.getInput('version')
+                content: core.getInput('test_results')
               }
             }
           ]
